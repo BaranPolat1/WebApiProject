@@ -11,11 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity", "Entity\Entity.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{D395F00D-F7E6-467D-AAEC-9B7A1707371C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{3065B02B-8B41-474C-9EF1-B7D1DCD94B1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{3065B02B-8B41-474C-9EF1-B7D1DCD94B1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{5D865E9B-A0BC-46D3-97AF-E6A27D673712}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{5D865E9B-A0BC-46D3-97AF-E6A27D673712}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{2123969E-2581-42AA-8C41-420FEFA5B767}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utility", "Utility\Utility.csproj", "{2123969E-2581-42AA-8C41-420FEFA5B767}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{E952DB38-A9A2-4855-859D-2F544369D72E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{2123969E-2581-42AA-8C41-420FEFA5B767}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2123969E-2581-42AA-8C41-420FEFA5B767}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2123969E-2581-42AA-8C41-420FEFA5B767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E952DB38-A9A2-4855-859D-2F544369D72E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E952DB38-A9A2-4855-859D-2F544369D72E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E952DB38-A9A2-4855-859D-2F544369D72E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E952DB38-A9A2-4855-859D-2F544369D72E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+   <table>
+       <thead>
+           <tr>
+               <th></th>
+           </tr>
+       </thead>
+
+
+   </table>
+
+<button id="getAll">Get Post</button>
+
+@section Scripts{
+    <script>
+        document.querySelector('#getAll').addEventListener('click', getAll);
+        function getAll() {
+            var url = 'https://jsonplaceholder.typicode.com/posts';
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onload = function () {
+                if (this.status === 200) {
+                    var posts = JSON.parse(this.responseText);
+                    posts.forEach(myFunction);
+                    function myFunction(item) {
+                        document.querySelector("#demo").innerHTML += "<h2>" + item.title + "</h2>" + "<p>" + item.body + "</p>";
+                          
+                        }
+                }
+            }
+            xhr.send();
+        }
+
+    </script>
+}
