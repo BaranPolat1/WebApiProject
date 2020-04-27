@@ -1,25 +1,26 @@
 ﻿
 @{
-    ViewData["Title"] = "Test";
+    ViewData["Title"] = "PostList";
 }
 
 <table class="table">
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Title</th>
-            <th scope="col">Body</th>
+            <th scope="col">Header</th>
+            <th scope="col">Content</th>
+            
         </tr>
     </thead>
     <tbody id="demo">
     </tbody>
 </table>
-<button id="getAll"> Get All Posts</button>
+<button id="get"> Get All Posts</button>
 @section Scripts{
     <script>
-        document.querySelector('#getAll').addEventListener('click', getAll);
-        function getAll() {
-            var url = 'https://jsonplaceholder.typicode.com/posts';
+        document.querySelector('#get').addEventListener('click', get);
+        function get() {
+            var url = 'https://localhost:44332/api/posts/getlist';
             var xhr = new XMLHttpRequest();
             xhr.open('GET', url, true);
             xhr.onload = function () {
@@ -29,9 +30,9 @@
                     function myFunction(item) {
                         document.querySelector("#demo").innerHTML += "<tr>" +
                             "<th scope='row'>" + item.id + "</th>" +
-                            "<td>" + item.title + "</td>" +
-                            "<td>" + item.body + "</td>" +
-                            "</tr>";
+                            "<td>" + item.header + "</td>" +
+                            "<td>" + item.content + "</td>" +
+                             "</tr>";
 
                     }
                 }
@@ -41,3 +42,5 @@
 
     </script>
 }
+
+

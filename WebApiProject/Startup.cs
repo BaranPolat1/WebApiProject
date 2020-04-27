@@ -35,7 +35,7 @@ namespace WebApiProject
             var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
             services.AddCors(options =>
             {
-                options.AddPolicy("AllowOrigin", builder => builder.WithOrigins("https://localhost:44310/"));
+                options.AddPolicy("AllowOrigin", builder => builder.WithOrigins("https://localhost:44342").AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
             });
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
             {
@@ -58,7 +58,7 @@ namespace WebApiProject
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors(builder => builder.WithOrigins("https://localhost:44310/").AllowAnyHeader());
+            app.UseCors(builder => builder.WithOrigins("https://localhost:44342").AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
             app.UseHttpsRedirection();
 
             app.UseRouting();
